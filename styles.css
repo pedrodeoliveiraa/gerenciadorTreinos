@@ -3,7 +3,7 @@
     --primary-dark: darkgreen;
     --background: black;
     --text-color: white;
-    --card-background: #f0f0f0;
+    --card-background: #656565;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -25,6 +25,7 @@ body {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha em telas pequenas */
 }
 
 .tab-button {
@@ -33,11 +34,12 @@ body {
     border: none;
     padding: 8px 16px;
     cursor: pointer;
-    flex: 1;
-    margin: 0 5px;
+    flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
+    margin: 5px; /* Espaçamento entre os botões */
     border-radius: 5px;
     transition: background-color 0.3s;
     font-size: 14px;
+    text-align: center;
 }
 
 .tab-button.active {
@@ -62,8 +64,10 @@ body {
     border-radius: 5px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
     font-size: 14px;
+    width: 100%; /* Botão ocupa toda a largura */
 }
 
 .treino-list {
@@ -88,6 +92,7 @@ body {
     font-size: 1em;
     background-color: #222;
     color: var(--text-color);
+    width: 100%; /* Input ocupa toda a largura */
 }
 
 .treino-item button {
@@ -112,6 +117,7 @@ body {
     margin-top: 10px;
     border-radius: 5px;
     display: flex;
+    flex-wrap: wrap; /* Permite que os campos quebrem para a próxima linha */
     gap: 10px;
     justify-content: space-between;
     color: black;
@@ -123,6 +129,7 @@ body {
     border-radius: 4px;
     background-color: #222;
     color: var(--text-color);
+    flex: 1 1 100px; /* Flex-grow, flex-shrink, flex-basis */
 }
 
 .detalhes-form button {
@@ -137,4 +144,40 @@ body {
 
 .detalhes-form button:hover {
     background-color: #D84315;
+}
+
+/* Media Queries para telas menores (celulares) */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .tab-button {
+        flex: 1 1 100%; /* Botões ocupam toda a largura em telas pequenas */
+        margin: 5px 0; /* Espaçamento vertical entre os botões */
+    }
+
+    .add-button {
+        font-size: 12px; /* Tamanho da fonte menor para celulares */
+    }
+
+    .treino-item {
+        padding: 10px;
+    }
+
+    .treino-item input {
+        font-size: 14px; /* Tamanho da fonte menor para inputs */
+    }
+
+    .treino-item button {
+        font-size: 12px; /* Tamanho da fonte menor para botões */
+    }
+
+    .detalhes-form {
+        flex-direction: column; /* Campos empilhados verticalmente */
+    }
+
+    .detalhes-form input {
+        width: 100%; /* Campos ocupam toda a largura */
+    }
 }
