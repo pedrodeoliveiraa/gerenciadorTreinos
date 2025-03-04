@@ -1,0 +1,140 @@
+:root {
+    --primary-color: green;
+    --primary-dark: darkgreen;
+    --background: black;
+    --text-color: white;
+    --card-background: #f0f0f0;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.tab-button.active {
+    background-color: var(--primary-dark);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.add-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.treino-list {
+    margin-top: 10px;
+}
+
+.treino-item {
+    background-color: var(--card-background);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: var(--shadow);
+}
+
+.treino-item input {
+    padding: 8px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #222;
+    color: var(--text-color);
+}
+
+.treino-item button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-end;
+    transition: background-color 0.3s;
+    font-size: 12px;
+}
+
+.treino-item button:hover {
+    background-color: var(--primary-dark);
+}
+
+.detalhes-form {
+    background-color: var(--card-background);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    color: black;
+}
+
+.detalhes-form input {
+    padding: 5px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #222;
+    color: var(--text-color);
+}
+
+.detalhes-form button {
+    background-color: #FF5722;
+    color: var(--text-color);
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.detalhes-form button:hover {
+    background-color: #D84315;
+}
